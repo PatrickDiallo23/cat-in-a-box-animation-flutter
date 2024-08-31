@@ -1,6 +1,10 @@
 name: Check the quality of my code
 on:
   push:
+    paths:
+      - '**/*.dart' # Run when any Dart file is modified
+      - '**/pubspec.yaml' # Run when pubspec.yaml is modified
+      - '**/lib/**' # Run when files in the lib directory are modified
 
 jobs:
   quality_check:
